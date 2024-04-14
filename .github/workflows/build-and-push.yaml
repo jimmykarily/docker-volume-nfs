@@ -25,6 +25,7 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: quay.io/jimmykarily/docker-volume-nfs:latest
+        platforms: linux/arm/v7,linux/arm64
       env:
         DOCKER_USERNAME: ${{ secrets.QUAY_IO_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.QUAY_IO_TOKEN }}
