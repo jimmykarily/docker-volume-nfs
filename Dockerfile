@@ -1,8 +1,8 @@
-FROM centos:latest
-MAINTAINER "Alphayax <alphayax@gmail.com>"
+FROM ubuntu:latest
+MAINTAINER "Dimitris Karakasilis <dimitris@karakasilis.me>"
 
 # Install nfs-utils
-RUN yum -y install /usr/bin/ps nfs-utils && yum clean all
+RUN apt update && apt install -y nfs-kernel-server nfs-common
 
 # Copy entrypoint
 ADD run_nfs.sh /usr/local/bin/run_nfs.sh
